@@ -21,7 +21,7 @@ The operator takes all the values of a cell and counts them. The computation is 
 
 ##### See Also
 
-[product_operator](https://github.com/tercen/product_operator), [sum_operator](https://github.com/tercen/sum_operator)
+[product](https://github.com/tercen/product_operator), [sum](https://github.com/tercen/sum_operator)
 
 
 #### Examples
