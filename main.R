@@ -1,13 +1,14 @@
 library(tercen)
 library(dplyr)
+library(data.table)
 
 ctx <- tercenCtx()
 
-df.out<-ctx %>% 
-  select(.y, .ci, .ri) %>% 
-  group_by(.ci, .ri) %>%
-  summarise(count = as.double(length(.y))) %>%
-  ctx$addNamespace() 
+dat <- ctx %>% 
+  select(.y, .ci, .ri) %>%
+  as.data.table()
 
-df.out %>%
+dat[, .(count = .N), by = .(.ci, .ri)] %>%
+  as_tibble() %>%
+  ctx$addNamespace() %>%
   ctx$save()
