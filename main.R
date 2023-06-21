@@ -10,5 +10,6 @@ dat <- ctx %>%
 
 dat[, .(count = as.numeric(.N)), by = .(.ci, .ri)] %>%
   as_tibble() %>%
+  arrange(.ci, .ri) %>%
   ctx$addNamespace() %>%
   ctx$save()
