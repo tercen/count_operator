@@ -8,7 +8,7 @@ dat <- ctx %>%
   select(.y, .ci, .ri) %>%
   as.data.table()
 
-dat[, .(count = .N), by = .(.ci, .ri)] %>%
+dat[, .(count = as.numeric(.N)), by = .(.ci, .ri)] %>%
   as_tibble() %>%
   ctx$addNamespace() %>%
   ctx$save()
