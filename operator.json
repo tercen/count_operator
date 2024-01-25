@@ -1,9 +1,13 @@
 {
   "name": "Count",
   "description": "Count the number of data points per cell",
-  "tags": ["basic statistics"],
-  "authors": ["tercen"],
-  "urls": ["https://github.com/tercen/count_operator"]
+  "tags": [
+    "descriptive statistics"
+  ],
+  "authors": [
+    "tercen"
+  ],
+  "urls": [
+    "https://github.com/tercen/count_operator"
+  ]
 }
-
-
