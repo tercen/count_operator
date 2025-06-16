@@ -1,1 +1,65 @@
-ewogICJuYW1lIjogIkNvdW50IiwKICAiZGVzY3JpcHRpb24iOiAiQ291bnRzIHRoZSBudW1iZXIgb2YgZGF0YSBwb2ludHMgcGVyIGNlbGwuIiwKICAidGFncyI6IFsKICAgICJkZXNjcmlwdGl2ZSBzdGF0aXN0aWNzIgogIF0sCiAgImF1dGhvcnMiOiBbCiAgICAidGVyY2VuIgogIF0sCiAgInVybHMiOiBbCiAgICAiaHR0cHM6Ly9naXRodWIuY29tL3RlcmNlbi9jb3VudF9vcGVyYXRvciIKICBdLAogICJvcGVyYXRvclNwZWMiOiB7CiAgICAia2luZCI6ICJPcGVyYXRvclNwZWMiLAogICAgIm9udG9sb2d5VXJpIjogImh0dHBzOi8vdGVyY2VuLmNvbS9fb250b2xvZ3kvdGVyY2VuIiwKICAgICJvbnRvbG9neVZlcnNpb24iOiAiMC4wLjEiLAogICAgImlucHV0U3BlY3MiOiBbCiAgICAgIHsKICAgICAgICAia2luZCI6ICJDcm9zc3RhYlNwZWMiLAogICAgICAgICJtZXRhRmFjdG9ycyI6IFsKICAgICAgICAgIHsKICAgICAgICAgICAgImtpbmQiOiAiTWV0YUZhY3RvciIsCiAgICAgICAgICAgICJuYW1lIjogIk9ic2VydmF0aW9uIiwKICAgICAgICAgICAgInR5cGUiOiAiIiwKICAgICAgICAgICAgImRlc2NyaXB0aW9uIjogIk9ic2VydmF0aW9ucyB0byBiZSBjb3VudGVkIHBlciBjZWxsLiIsCiAgICAgICAgICAgICJvbnRvbG9neU1hcHBpbmciOiAib2JzZXJ2YXRpb24iLAogICAgICAgICAgICAiY3Jvc3N0YWJNYXBwaW5nIjogInkiLAogICAgICAgICAgICAiY2FyZGluYWxpdHkiOiAiMS4ubiIsCiAgICAgICAgICAgICJmYWN0b3JzIjogW10KICAgICAgICAgIH0sCiAgICAgICAgICB7CiAgICAgICAgICAgICJraW5kIjogIk1ldGFGYWN0b3IiLAogICAgICAgICAgICAibmFtZSI6ICJTdHJhdGlmeWluZyBGYWN0b3JzIiwKICAgICAgICAgICAgInR5cGUiOiAiIiwKICAgICAgICAgICAgImRlc2NyaXB0aW9uIjogIk9wdGlvbmFsIGZhY3RvcnMgdG8gc3RyYXRpZnl0aGUgZGF0YS4iLAogICAgICAgICAgICAib250b2xvZ3lNYXBwaW5nIjogInZhcmlhYmxlIiwKICAgICAgICAgICAgImNyb3NzdGFiTWFwcGluZyI6ICJyb3csY29sdW1uIiwKICAgICAgICAgICAgImNhcmRpbmFsaXR5IjogIjAuLm4iLAogICAgICAgICAgICAiZmFjdG9ycyI6IFtdCiAgICAgICAgICB9CiAgICAgICAgXSwKICAgICAgICAiYXhpcyI6IFsKICAgICAgICAgIHsKICAgICAgICAgICAgImtpbmQiOiAiQXhpc1NwZWMiLAogICAgICAgICAgICAibWV0YUZhY3RvcnMiOiBbCiAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgImtpbmQiOiAiTWV0YUZhY3RvciIsCiAgICAgICAgICAgICAgICAibmFtZSI6ICJEYXRhIiwKICAgICAgICAgICAgICAgICJ0eXBlIjogIm51bWVyaWMiLAogICAgICAgICAgICAgICAgImRlc2NyaXB0aW9uIjogIlRoZSBtZWFzdXJlbWVudHMgdG8gYmUgY291bnRlZC4iLAogICAgICAgICAgICAgICAgIm9udG9sb2d5TWFwcGluZyI6ICJtZWFzdXJlbWVudCIsCiAgICAgICAgICAgICAgICAiY3Jvc3N0YWJNYXBwaW5nIjogInkiLAogICAgICAgICAgICAgICAgImNhcmRpbmFsaXR5IjogIjEiLAogICAgICAgICAgICAgICAgImZhY3RvcnMiOiBbXQogICAgICAgICAgICAgIH0KICAgICAgICAgICAgXQogICAgICAgICAgfQogICAgICAgIF0KICAgICAgfQogICAgXQogIH0KfQ==
+{
+  "name": "Count",
+  "description": "Counts the number of data points present in each cell of the input projection.",
+  "tags": [
+    "statistics",
+    "count"
+  ],
+  "authors": [
+    "tercen"
+  ],
+  "urls": [
+    "https://github.com/tercen/count_operator"
+  ],
+  "container": "ghcr.io/tercen/count_operator:specs",
+  "properties": [],
+  "operatorSpec": {
+    "kind": "OperatorSpec",
+    "ontologyUri": "https://tercen.com/_ontology/tercen",
+    "ontologyVersion": "0.0.1",
+    "inputSpecs": [
+      {
+        "kind": "CrosstabSpec",
+        "metaFactors": [
+          {
+            "kind": "MetaFactor",
+            "name": "Row",
+            "type": "",
+            "description": "Stratifying factor for rows (optional)",
+            "ontologyMapping": "row",
+            "crosstabMapping": "row",
+            "cardinality": "0..n",
+            "factors": []
+          },
+          {
+            "kind": "MetaFactor",
+            "name": "Column",
+            "type": "",
+            "description": "Stratifying factor for columns (optional)",
+            "ontologyMapping": "column",
+            "crosstabMapping": "column",
+            "cardinality": "0..n",
+            "factors": []
+          }
+        ],
+        "axis": [
+          {
+            "kind": "AxisSpec",
+            "metaFactors": [
+              {
+                "kind": "MetaFactor",
+                "name": "Observations",
+                "type": "numeric",
+                "description": "Observations to be counted per cell",
+                "ontologyMapping": "observation",
+                "crosstabMapping": "y",
+                "cardinality": "1..n",
+                "factors": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
