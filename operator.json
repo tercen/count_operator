@@ -9,5 +9,54 @@
   ],
   "urls": [
     "https://github.com/tercen/count_operator"
+  ],
+  "operatorSpec": {
+    "kind": "OperatorSpec",
+    "ontologyUri": "https://tercen.com/_ontology/tercen",
+    "ontologyVersion": "0.0.1",
+    "inputSpecs": [
+      {
+          "kind": "CrosstabSpec",
+          "metaFactors": [
+              {
+                  "kind": "MetaFactor",
+                  "name": "Observation",
+                  "type": "",
+                  "description": "Observations to be counted per cell.",
+                  "ontologyMapping": "observation",
+                  "crosstabMapping": "y",
+                  "cardinality": "1..n",
+                  "factors": []
+              },
+              {
+                  "kind": "MetaFactor",
+                  "name": "Stratifying Factors",
+                  "type": "",
+                  "description": "Optional factors to stratify the data.",
+                  "ontologyMapping": "variable",
+                  "crosstabMapping": "row,column",
+                  "cardinality": "0..n",
+                  "factors": []
+              }
+          ],
+          "axis": [
+              {
+                  "kind": "AxisSpec",
+                  "metaFactors": [
+                      {
+                          "kind": "MetaFactor",
+                          "name": "Data",
+                          "type": "numeric",
+                          "description": "The measurements to be counted.",
+                          "ontologyMapping": "measurement",
+                          "crosstabMapping": "y",
+                          "cardinality": "1",
+                          "factors": []
+                      }
+                  ]
+              }
+          ]
+      }
   ]
+  }
 }
