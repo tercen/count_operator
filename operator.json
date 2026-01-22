@@ -25,7 +25,7 @@
             "name": "Row",
             "type": "",
             "description": "Stratifying factor for rows (optional)",
-            "ontologyMapping": "row",
+            "ontologyMapping": "variable",
             "crosstabMapping": "row",
             "cardinality": "0..n",
             "factors": []
@@ -35,7 +35,7 @@
             "name": "Column",
             "type": "",
             "description": "Stratifying factor for columns (optional)",
-            "ontologyMapping": "column",
+            "ontologyMapping": "observation",
             "crosstabMapping": "column",
             "cardinality": "0..n",
             "factors": []
@@ -50,7 +50,7 @@
                 "name": "Observations",
                 "type": "numeric",
                 "description": "Observations to be counted per cell",
-                "ontologyMapping": "observation",
+                "ontologyMapping": "measurement",
                 "crosstabMapping": "y",
                 "cardinality": "1..n",
                 "factors": []
