@@ -48,7 +48,7 @@
               {
                 "kind": "MetaFactor",
                 "name": "Observations",
-                "type": "numeric",
+                "type": "double",
                 "description": "Observations to be counted per cell",
                 "ontologyMapping": "measurement",
                 "crosstabMapping": "y",
